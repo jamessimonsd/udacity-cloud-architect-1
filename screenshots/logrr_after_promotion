@@ -1,0 +1,23 @@
+Last login: Fri Jun 16 18:03:14 2023 from 42.116.202.218
+[ec2-user@ip-10-0-11-145 ~]$ mysql -h udacity-replica.cahgwtdjqoyd.us-west-2.rds.amazonaws.com -p 3306 -u admin -p
+Enter password:
+ERROR 1049 (42000): Unknown database '3306'
+[ec2-user@ip-10-0-11-145 ~]$ mysql -h udacity-replica.cahgwtdjqoyd.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+Enter password:
+Welcome to the MariaDB monitor. Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.32 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> INSERT INTO user (name, email) VALUES ('Janny doesnt', 'johndoe@example.com');
+Query OK, 1 row affected (0.012 sec)
+
+MySQL [udacity]>
